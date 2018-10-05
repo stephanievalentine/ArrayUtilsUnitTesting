@@ -40,11 +40,11 @@ public class StringArrayUtils {
 	 *            The array from which to search for the needle
 	 * @param needle
 	 *            The String to search for
-	 * @return true if the needle is in the haystack, false otherwise (if the needle isn't
-	 *         in the haystack array, or if the haystack array is null)
+	 * @return true if the needle is in the haystack, false otherwise (if the needle
+	 *         isn't in the haystack array, or if the haystack array is null)
 	 */
 	public static boolean contains(String[] haystack, String needle) {
-		for (int i = 1; i < haystack.length; i++) {
+		for (int i = 0; i < haystack.length; i++) {
 			if (haystack[i].equals(needle)) {
 				return true;
 			}
