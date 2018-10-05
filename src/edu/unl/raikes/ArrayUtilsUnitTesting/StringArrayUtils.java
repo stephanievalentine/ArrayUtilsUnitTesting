@@ -24,7 +24,7 @@ public class StringArrayUtils {
 		}
 		int minElementIndex = 0;
 		for (int i = 1; i < array.length; i++) {
-			if (array[i].compareTo(array[minElementIndex]) == -1) {
+			if (array[i].compareTo(array[minElementIndex]) < 0) {
 				minElementIndex = i;
 			}
 		}
@@ -41,9 +41,13 @@ public class StringArrayUtils {
 	 * @param needle
 	 *            The String to search for
 	 * @return true if the needle is in the haystack, false otherwise (if the needle
-	 *         isn't in the haystack array, or if the haystack array is null)
+	 *         isn't in the haystack array, if the haystack array is null, or if the
+	 *         needle is null)
 	 */
 	public static boolean contains(String[] haystack, String needle) {
+		if (haystack == null || needle == null) {
+			return false; 
+		}
 		for (int i = 0; i < haystack.length; i++) {
 			if (haystack[i].equals(needle)) {
 				return true;
