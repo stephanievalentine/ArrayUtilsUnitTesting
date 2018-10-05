@@ -8,10 +8,10 @@ package edu.unl.raikes.ArrayUtilsUnitTesting;
 public class StringArrayUtils {
 
 	/**
-	 * Returns the index of the smallest element in the input array. If there are
-	 * duplicate minimum elements in the input array, the function will return the
-	 * index of the first occurrence. If the array has zero elements, or is null,
-	 * the function will return -1.
+	 * Returns the index of the smallest element in the input array (determined
+	 * lexicographically). If there are duplicate minimum elements in the input
+	 * array, the function will return the index of the first occurrence. If the
+	 * array has zero elements, or is null, the function will return -1.
 	 * 
 	 * @param array
 	 *            the array from which the minimum element will be found
